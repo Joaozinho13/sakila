@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::resource('Actor/actors', 'Actor\\ActorsController');
 Route::resource('Category/category', 'Category\\CategoryController');
+Route::resource('Country/country', 'Country\\CountryController');
