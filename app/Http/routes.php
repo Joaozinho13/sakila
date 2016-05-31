@@ -20,3 +20,4 @@ Route::resource('Category/category', 'Category\\CategoryController');
 Route::resource('Country/country', 'Country\\CountryController');
 Route::resource('Language/language', 'Language\\LanguageController');
 Route::resource('FilmText/film-text', 'FilmText\\FilmTextController');
+Route::resource('City/city', 'City\\CityController');
