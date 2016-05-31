@@ -9,10 +9,10 @@
     {!! Form::open(['url' => '/Actor/actors', 'class' => 'form-horizontal']) !!}
 
                 <div class="form-group {{ $errors->has('firs_name') ? 'has-error' : ''}}">
-                {!! Form::label('firs_name', trans('actors.firs_name'), ['class' => 'col-sm-3 control-label']) !!}
+                {!! Form::label('first_name', trans('actors.first_name'), ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('firs_name', null, ['class' => 'form-control', 'required' => 'required']) !!}
-                    {!! $errors->first('firs_name', '<p class="help-block">:message</p>') !!}
+                    {!! Form::text('first_name', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                    {!! $errors->first('first_name', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('last_name') ? 'has-error' : ''}}">

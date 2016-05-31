@@ -41,7 +41,7 @@ class ActorsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['firs_name' => 'required', 'last_name' => 'required', ]);
+        $this->validate($request, ['first_name' => 'required', 'last_name' => 'required', ]);
 
         Actor::create($request->all());
 
@@ -87,7 +87,7 @@ class ActorsController extends Controller
      */
     public function update($id, Request $request)
     {
-        $this->validate($request, ['firs_name' => 'required', 'last_name' => 'required', ]);
+        $this->validate($request, ['first_name' => 'required', 'last_name' => 'required', ]);
 
         $actor = Actor::findOrFail($id);
         $actor->update($request->all());
