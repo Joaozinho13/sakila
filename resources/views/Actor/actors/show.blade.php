@@ -10,7 +10,7 @@
                 <tr>
                     <th>ID.</th><td>{{ $actor->id }}</td>
                 </tr>
-                <tr><th> {{ trans('actors.firs_name') }} </th><td> {{ $actor->firs_name }} </td></tr><tr><th> {{ trans('actors.last_name') }} </th><td> {{ $actor->last_name }} </td></tr>
+                <tr><th> {{ trans('actors.first_name') }} </th><td> {{ $actor->first_name }} </td></tr><tr><th> {{ trans('actors.last_name') }} </th><td> {{ $actor->last_name }} </td></tr>
             </tbody>
             <tfoot>
                 <tr>
