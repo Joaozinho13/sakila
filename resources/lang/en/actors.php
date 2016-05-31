@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'firs_name' => 'Firs Name',
+    'first_name' => 'First Name',
 'last_name' => 'Last Name',
 ];

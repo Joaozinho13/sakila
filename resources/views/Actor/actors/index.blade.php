@@ -8,7 +8,7 @@
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th><th> {{ trans('actors.firs_name') }} </th><th> {{ trans('actors.last_name') }} </th><th>Actions</th>
+                    <th>S.No</th><th> {{ trans('actors.first_name') }} </th><th> {{ trans('actors.last_name') }} </th><th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,7 +17,7 @@
                 {{-- */$x++;/* --}}
                 <tr>
                     <td>{{ $x }}</td>
-                    <td>{{ $item->firs_name }}</td><td>{{ $item->last_name }}</td>
+                    <td>{{ $item->first_name }}</td><td>{{ $item->last_name }}</td>
                     <td>
                         <a href="{{ url('/Actor/actors/' . $item->id) }}" class="btn btn-success btn-xs" title="View Actor"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <a href="{{ url('/Actor/actors/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit Actor"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>

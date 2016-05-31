@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Actor;
+namespace App\Http\Controllers\FilmText;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Actor;
+use App\FilmText;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
 
-class ActorsController extends Controller
+class FilmTextController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,9 +19,9 @@ class ActorsController extends Controller
      */
     public function index()
     {
-        $actors = Actor::paginate(15);
+        $filmtext = FilmText::paginate(15);
 
-        return view('Actor.actors.index', compact('actors'));
+        return view('FilmText.film-text.index', compact('filmtext'));
     }
 
     /**
@@ -31,7 +31,7 @@ class ActorsController extends Controller
      */
     public function create()
     {
-        return view('Actor.actors.create');
+        return view('FilmText.film-text.create');
     }
 
     /**
@@ -41,13 +41,13 @@ class ActorsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['first_name' => 'required', 'last_name' => 'required', ]);
+        $this->validate($request, ['title' => 'required', ]);
 
-        Actor::create($request->all());
+        FilmText::create($request->all());
 
-        Session::flash('flash_message', 'Actor added!');
+        Session::flash('flash_message', 'FilmText added!');
 
-        return redirect('Actor/actors');
+        return redirect('FilmText/film-text');
     }
 
     /**
@@ -59,9 +59,9 @@ class ActorsController extends Controller
      */
     public function show($id)
     {
-        $actor = Actor::findOrFail($id);
+        $filmtext = FilmText::findOrFail($id);
 
-        return view('Actor.actors.show', compact('actor'));
+        return view('FilmText.film-text.show', compact('filmtext'));
     }
 
     /**
@@ -73,9 +73,9 @@ class ActorsController extends Controller
      */
     public function edit($id)
     {
-        $actor = Actor::findOrFail($id);
+        $filmtext = FilmText::findOrFail($id);
 
-        return view('Actor.actors.edit', compact('actor'));
+        return view('FilmText.film-text.edit', compact('filmtext'));
     }
 
     /**
@@ -87,14 +87,14 @@ class ActorsController extends Controller
      */
     public function update($id, Request $request)
     {
-        $this->validate($request, ['first_name' => 'required', 'last_name' => 'required', ]);
+        $this->validate($request, ['title' => 'required', ]);
 
-        $actor = Actor::findOrFail($id);
-        $actor->update($request->all());
+        $filmtext = FilmText::findOrFail($id);
+        $filmtext->update($request->all());
 
-        Session::flash('flash_message', 'Actor updated!');
+        Session::flash('flash_message', 'FilmText updated!');
 
-        return redirect('Actor/actors');
+        return redirect('FilmText/film-text');
     }
 
     /**
@@ -106,10 +106,10 @@ class ActorsController extends Controller
      */
     public function destroy($id)
     {
-        Actor::destroy($id);
+        FilmText::destroy($id);
 
-        Session::flash('flash_message', 'Actor deleted!');
+        Session::flash('flash_message', 'FilmText deleted!');
 
-        return redirect('Actor/actors');
+        return redirect('FilmText/film-text');
     }
 }
