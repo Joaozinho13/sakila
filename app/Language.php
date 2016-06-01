@@ -26,4 +26,8 @@ class Language extends Model
      * @var array
      */
     protected $fillable = ['language_name'];
+
+    public function film(){
+        return $this->hasMany('App\Film');
+    }
 }
