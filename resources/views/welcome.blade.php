@@ -1,45 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
+@section('content')
+    <ul class="list-group">
+        <li class="list-group-item">  <a href="{{ url('/Country/country/') }}">Países</a></li>
+        <li class="list-group-item">  <a href="{{ url('/City/city/') }}">Cadastro de Cidades</a></li>
+        <li class="list-group-item">  <a href="{{ url('/Address/address/') }}">Endereços</a></li>
+        <li class="list-group-item">  <a href="{{ url('/Category/category/') }}">Categorias</a></li>
+        <li class="list-group-item">  <a href="{{ url('/Actor/actors/') }}">Atores</a></li>
+        <li class="list-group-item">  <a href="{{ url('/Language/language/') }}">Idiomas</a></li>
+    </ul>
+@endsection
