@@ -10,5 +10,6 @@
         <li class="list-group-item">  <a href="{{ url('/Language/language/') }}">Idiomas</a></li>
         <li class="list-group-item">  <a href="{{ url('/Film/film/') }}">Filmes</a></li>
         <li class="list-group-item">  <a href="{{ url('/Staff/staff/') }}">Funcionários</a></li>
+        <li class="list-group-item">  <a href="{{ url('/Store/store/') }}">Lojas</a></li>
     </ul>
 @endsection
