@@ -35,4 +35,6 @@ class Staff extends Model
     public function store(){
         return $this->hasMany('App\Store');
     }
+    
+
 }
