@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Staff extends Model
+class Store extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'staff';
+    protected $table = 'stores';
 
     /**
     * The database primary key value.
@@ -25,14 +25,15 @@ class Staff extends Model
      *
      * @var array
      */
-    protected $fillable = ['first_name', 'last_name', 'address_id', 'picture', 'email', 'store_id', 'active', 'username', 'password'];
+    protected $fillable = ['manager_staff_id', 'address_id'];
 
     public function address()
     {
         return $this->belongsTo('App\Address');
     }
 
-    public function store(){
-        return $this->hasMany('App\Store');
+    public function manager_staff()
+    {
+        return $this->belongsTo('App\Staff');
     }
 }

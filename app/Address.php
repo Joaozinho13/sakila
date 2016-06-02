@@ -34,4 +34,8 @@ class Address extends Model
     public function Staff(){
         return $this->hasMany('App\Staff');
     }
+
+    public function store(){
+        return $this->hasMany('App\Store');
+    }
 }
