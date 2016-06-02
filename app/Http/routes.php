@@ -23,3 +23,4 @@ Route::resource('FilmText/film-text', 'FilmText\\FilmTextController');
 Route::resource('City/city', 'City\\CityController');
 Route::resource('Address/address', 'Address\\AddressController');
 Route::resource('Film/film', 'Film\\FilmController');
+Route::resource('Staff/staff', 'Staff\\StaffController');
